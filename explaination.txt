@@ -46,4 +46,6 @@ on the dockerhub
 16. A lot of people frequently ask “Where is Docker storing my data when I use a volume?” If you want to know, you can use the docker volume inspect command.
     -> docker volume inspect todo-db
     -> The Mountpoint is the actual location of the data on the disk. Note that on most machines, you will need to have root access to access this directory from the host. But, that’s where it is.
-17. 
+17. Trying out bind mounts : 
+    -> Run the following command to start bash in an ubuntu container with a bind mount.
+    -> docker run -it --mount type=bind,src="$(pwd)",target=/src ubuntu bash
